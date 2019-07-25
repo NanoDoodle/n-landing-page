@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #54555e 2px solid;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=style.css.map */
