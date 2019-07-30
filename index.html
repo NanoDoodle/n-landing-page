@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- START CODE PATR -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">N-Landing</a>
         <button
@@ -375,7 +375,21 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      //other script
+      //Init Scrollspy
+      $('body').scrollspy({target:'#main-nav'})
+
+      //Smooth Scrolling
+      $('#main-nav a').on('click',function(event){
+        if(this.hash !== ""){
+          event.preventDefault();
+          const hash = this.hash;
+          $('html,body').animate({
+            scrollTop: $(hash).offset().top
+          },800,function(){
+            window.location.hash = hash; 
+          });
+        }
+      });
     </script>
     <!-- END SCRIPT PART-->
   </body>
