@@ -49,4 +49,11 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
+
+#create-section .fas {
+  background: #fff;
+  color: #008ed6;
+  padding: 5px;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=style.css.map */
